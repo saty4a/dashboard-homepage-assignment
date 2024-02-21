@@ -12,7 +12,7 @@ const HomePageHeader = () => {
       </p>
       <input
         type="text"
-        className="bg-[#2C3A58] rounded-2xl w-[20rem] md:w-[30rem] py-3 ps-4 mt-4 ms-5 lg:ms-0"
+        className="bg-[#2C3A58] rounded-2xl w-[20rem] md:w-[36rem] py-3 ps-4 mt-4 ms-5 lg:ms-0"
         placeholder=" 🔍 search"
       />
       <div className="bell-icon bg-[#409BEE] mb-5 me-10 mt-4 ms-5 lg:mb-0 lg:ms-0 hover:border hover:border-2 hover:border-white">

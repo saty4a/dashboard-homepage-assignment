@@ -6,7 +6,7 @@ import react from "react";
 
 const HomePage = () => {
   return (
-    <section className="homepage my-5 mx-2 flex flex-col lg:flex-row">
+    <section className="homepage my-5 mx-2 flex flex-col lg:flex-row 2xl:w-[85rem] 2xl:justify-evenly">
       <div>
         <HomePageHeader />
         <Statistics />

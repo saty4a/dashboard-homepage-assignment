@@ -8,7 +8,7 @@ import CircularStyle from "./circularStyle";
 
 const StatisticsChart = () => {
   return (
-    <div className="bg-[#1B2C4F] rounded-3xl ms-4 px-5 pb-2 mt-9 h-[25rem] w-[20rem] md:w-[26rem] me-10 lg:hover:-translate-y-1 hover:scale-110 hover:ease-in-out duration-300">
+    <div className="bg-[#1B2C4F] rounded-3xl ms-4 px-5 pb-2 mt-9 h-[25rem] w-[20rem] md:w-[27.6rem] me-5 lg:hover:-translate-y-1 hover:scale-110 hover:ease-in-out duration-300">
       <div className="flex justify-between items-center mx-4 my-6 w-full">
         <div>
           <h4 className="font-bold text-2xl mt-2">Statistics</h4>

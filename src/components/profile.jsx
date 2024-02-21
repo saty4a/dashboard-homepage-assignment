@@ -11,7 +11,7 @@ const Profile = () => {
   const avatars = [aliza, maira, alexa, "8+"];
 
   return (
-    <div className="bg-[#111729] animate profile-animation rounded-3xl mx-5 px-5 my-10 flex flex-col items-center h-[61rem] gap-8">
+    <div className="bg-[#111729] animate profile-animation rounded-3xl mx-5 2xl:me-[3rem] px-5 mt-[3.2rem] my-10 flex flex-col items-center h-[62.2rem] gap-8">
       <CircularStyle
         classStyle={"profile-circle"}
         container={"profile-container"}
