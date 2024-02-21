@@ -9,13 +9,10 @@ import Image from "next/image";
 import person from "../assets/person.png";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 
-// const isBrowser = () => typeof window !== "undefined";
-
 const Header = () => {
   const styles = "sticky top-0 z-50 blur-background";
   const [showNavBar, setShowNavBar] = useState(false);
   const [styleNavBar, setStyleNavBar] = useState(
-    // isBrowser() ? () : ""
     window.innerWidth <= 1024 ? "" : styles
   );
   const [navAnimation, setNavAnimation] = useState("slide-in-done");
