@@ -2,32 +2,285 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.manrope {
+  font-family: var(--font-manrope);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  background-color: #111729;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.background-navBar {
+  background-color: #112240;
+}
+
+.nav-elements {
+  color: white;
+}
+
+.blur-background {
+  backdrop-filter: blur(10px) !important;
+}
+
+.navbar-padding {
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+}
+
+li.active {
+  background-color: #2c3a58;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 12px;
+}
+
+.nav-animation {
+  animation: 2s ease-in 0s 1 slide-down;
+}
+
+.container {
+  background-color: #fcd5d8;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 20px;
+}
+
+.homepage {
+  background-color: #151c39;
+  border-radius: 20px;
+}
+
+.image-style {
+  width: 2rem !important;
+}
+
+.bell-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 12px;
+}
+
+.waving-hand {
+  transform: rotate(180deg) perspective(20);
+}
+
+.patient-card {
+  background: linear-gradient(
+    to right,
+    #1b2c4f 0%,
+    #1b2c4f 60%,
+    #2c3a58 60%,
+    #2c3a58 100%
+  );
+}
+
+.trend {
+  background: linear-gradient(
+    to bottom,
+    rgba(64, 155, 238, 0.5) 0%,
+    rgba(64, 155, 238, 0.5) 25%,
+    rgba(64, 155, 238, 1) 25%,
+    rgba(64, 155, 238, 1) 100%
+  );
+}
+
+.event-circle {
+  border-radius: 100%;
+  border: 6px solid #d9d9d9;
+  height: 120px;
+  width: 120px;
+}
+
+.event-container {
+  background-color: #efabab;
+  height: 5.5rem;
+  width: 5.5rem;
+  border-radius: 50px;
+  border: 2px solid black;
+}
+
+.consultation-circle {
+  border-radius: 50%;
+  border: 16px solid #409bee;
+  border-top: 16px solid #f1f1f1;
+  height: 90px;
+  width: 90px;
+  transform: rotate(40deg);
+}
+
+.consultation-container {
+  background-color: transparent;
+}
+
+.profile-circle {
+  border-radius: 100%;
+  border: 6px solid #409bee;
+  border-top: 6px solid #151c39;
+  height: 120px;
+  width: 120px;
+  margin-top: 4rem;
+  transform: rotate(40deg);
+}
+
+.profile-container {
+  background-color: #efabab;
+  height: 5.5rem;
+  width: 5.5rem;
+  border-radius: 50px;
+  border: 2px solid black;
+  transform: rotate(-40deg);
+}
+
+.horizontal-divided-line {
+  display: flex;
+  align-items: center;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #686868;
+}
+
+.divider {
+  margin: 0 7px;
+}
+
+.chat-image-style {
+  width: 3rem !important;
+  background-color: #fcd5d8;
+  height: 2rem;
+  border-radius: 23px;
+}
+
+.chat-screen {
+  display: flex;
+  flex-direction: column;
+}
+
+.messages-container {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.message-text {
+  padding: 10px;
+  max-width: 12rem;
+}
+
+.message.patient {
+  justify-content: flex-start;
+}
+
+.message.doctor {
+  justify-content: flex-end;
+}
+
+.wave-gradient {
+  width: 22rem !important;
+}
+
+.indicator-circle {
+  border-radius: 100%;
+  border: 7px solid black;
+  height: 2rem;
+  width: 2rem;
+  background-color: white;
+}
+
+.indicator-line {
+  height: 0.4rem;
+  width: 5rem;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  transform: rotate(90deg);
+  border-radius: 8%;
+}
+
+.homepage-header-animation {
+  animation-delay: 3s;
+}
+
+.statistic-animation {
+  animation-delay: s;
+}
+
+.schedule-animation {
+  animation-delay: 0s;
+}
+
+.profile-animation {
+  animation-delay: 1s;
+}
+
+.animate {
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-name: slide-up;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in;
+}
+
+.slide-in-done {
+  animation: slide-in 600ms ease-in;
+}
+
+.slide-out-done {
+  animation: slide-out 600ms ease-out;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translatex(10rem);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  100% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
