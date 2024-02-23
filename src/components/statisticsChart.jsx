@@ -42,7 +42,7 @@ const StatisticsChart = () => {
           className=""
           alt="logo"
         />
-        <div className="absolute bottom-[3.1rem] left-[7.1rem] lg:bottom-[6.1rem] lg:left-[9.3rem]">
+        <div className="absolute bottom-[2.9rem] left-[7.1rem] md:bottom-[3.9rem] lg:bottom-[7.1rem] lg:left-[9.3rem]">
           <div className="indicator-circle absolute bottom-[2.4rem] left-[1.5rem]"></div>
           <div className="indicator-line"></div>
         </div>

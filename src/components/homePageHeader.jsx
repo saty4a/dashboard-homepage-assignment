@@ -1,13 +1,24 @@
-import react from "react";
+import { getText } from "@/apiCalls/fetchData";
+import react, { useEffect, useState } from "react";
 import { VscBellDot } from "react-icons/vsc";
 
 const HomePageHeader = () => {
+  const [changeText, setChangeText] = useState("");
+
+  useEffect(() => {
+    getText("header").then((res) => {
+      if (res.data.success) {
+        setChangeText(res.data.textData.text);
+      }
+    })
+  },[])
+
   return (
     <div className="homepage-header-animation animate slide-in flex flex-col items-center lg:flex-row gap-5">
-      <p className="text-white mt-5 flex gap-2 lg:flex-col font-normal text-3xl mx-5 lg:me-0">
-        Hello
+      <p className="text-white mt-5 flex gap-2 lg:flex-col font-normal text-3xl mx-5 lg:me-0 font-extrabold">
+      {changeText ? `${changeText.split(",")[0]}` : "Hello,"}
         <span className="font-extrabold">
-          Dr.Colter! 👋🏻<span className="waving-hand"></span>
+        {changeText ? `${changeText.split(",")[1]}` : "Dr.Colter!"} 👋🏻
         </span>
       </p>
       <input

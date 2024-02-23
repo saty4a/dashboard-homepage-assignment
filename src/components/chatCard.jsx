@@ -45,8 +45,8 @@ const ChatCard = () => {
   };
 
   return (
-    <div className="bg-[#1C2A4E] rounded-3xl h-[35rem] pt-4 mb-5 ">
-      <div className="flex justify-between items-center mx-4 my-3">
+    <div className="bg-[#1C2A4E] rounded-3xl h-[30rem] pt-4 mb-5 ">
+      <div className="flex justify-between items-center mx-4 my-1">
         <div className="flex items-center">
           <Image
             src={alexa}
@@ -68,8 +68,8 @@ const ChatCard = () => {
           <FaPhone size={20} className="mx-auto mt-2 cursor-pointer" />
         </div>
       </div>
-      <hr className="w-[16rem] md:w-[22rem] mx-3 mt-6 border-white" />
-      <div className="chat-screen mt-8">
+      <hr className="w-[16rem] md:w-[22rem] mx-3 mt-3 border-white" />
+      <div className="chat-screen mt-0">
         <div className="messages-container">
           {messages &&
             messages.map((message, index) => (
@@ -89,7 +89,7 @@ const ChatCard = () => {
               </div>
             ))}
         </div>
-        <div className="bg-[#2C3A58] flex rounded-3xl items-center justify-evenly my-2 mx-2 py-4 px-3 md:px-0">
+        <div className="bg-[#2C3A58] flex rounded-3xl items-center justify-evenly my-2 mx-2 py-2 px-3 md:px-0">
           <BiMicrophone size={20} className="cursor-pointer" />
           <input
             type="text"

@@ -129,6 +129,7 @@ li.active {
   height: 120px;
   width: 120px;
   margin-top: 3rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
   transform: rotate(40deg);
 }
 
@@ -138,6 +139,7 @@ li.active {
   width: 5.5rem;
   border-radius: 50px;
   border: 2px solid black;
+  /* margin-top: 1rem; */
   transform: rotate(-40deg);
 }
 

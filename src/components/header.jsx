@@ -8,6 +8,7 @@ import logo from "../assets/logo.png";
 import Image from "next/image";
 import person from "../assets/person.png";
 import { RiLogoutCircleRLine } from "react-icons/ri";
+import { getImage } from "@/apiCalls/fetchData";
 
 const Header = () => {
   const styles = "sticky top-0 z-50 blur-background";
@@ -16,6 +17,7 @@ const Header = () => {
     window.innerWidth <= 1024 ? "" : styles
   );
   const [navAnimation, setNavAnimation] = useState("slide-in-done");
+  const [image, setImage] = useState(logo);
 
   const ref = useRef();
   const handleNavBar = () => {
@@ -29,6 +31,14 @@ const Header = () => {
       setShowNavBar(!showNavBar);
     }
   };
+
+  useEffect(() => {
+    getImage().then((res) => {
+      if (res.data.success) {
+        setImage(res.data.imageData.imageUrl);
+      }
+    })
+  },[])
 
   useEffect(() => {
     if (showNavBar) {
@@ -59,7 +69,7 @@ const Header = () => {
     <nav className={`navBar ${styleNavBar} my-5 mx-5 lg:my-[4rem] lg:mx-8`}>
       <div className="nav-animation flex justify-between items-center flex-row lg:flex-col">
         <Image
-          src={logo}
+          src={image ? image : logo}
           height={0}
           width={0}
           objectFit="contain"
@@ -68,7 +78,7 @@ const Header = () => {
           alt="logo"
         />
         {window.innerWidth >= 1024 ? (
-          <div className="grid grid-cols-1 place-content-between h-[150vh] xl:h-[105vh] 2xl:h-[110vh]">
+          <div className="grid grid-cols-1 place-content-between h-[110vh] xl:h-[95vh] 2xl:h-[110vh]">
             <NavElements refs={ref} h={"full"} />
             <div className="flex flex-col gap-6 items-center">
               <div className="container">

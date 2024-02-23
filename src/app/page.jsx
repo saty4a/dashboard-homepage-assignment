@@ -1,6 +1,7 @@
 "use client";
 import Header from "@/components/header";
 import HomePage from "@/pages/homePage";
+import 'react-toastify/dist/ReactToastify.css';
 import Image from "next/image";
 
 export default function Home() {

@@ -7,6 +7,7 @@ import person from "../assets/person.png";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 
 const NavElements = (props) => {
+
   const navItems = [
     { className: "home", icon: <FaHouse size={20} className="mx-auto mt-2" /> },
     {
